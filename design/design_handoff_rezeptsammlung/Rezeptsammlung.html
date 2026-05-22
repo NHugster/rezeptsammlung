@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rezeptsammlung · Mobile-Konzept</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    background: #e7e3dc;
+    font-family: Manrope, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Color tokens — swapped at runtime by Tweaks */
+  :root {
+    --bg: #faf6f0;
+    --surface: #ffffff;
+    --fg: #2a1f1a;
+    --fg-soft: #4a3a30;
+    --muted: #8a7a6e;
+    --line: rgba(42, 31, 26, 0.10);
+    --line-soft: rgba(42, 31, 26, 0.06);
+
+    /* terracotta default */
+    --accent: #c8623f;
+    --accent-deep: #8a3e25;
+    --accent-soft: #f4e3d9;
+    --accent-fg: #fffaf6;
+  }
+
+  .palette-olive {
+    --accent: #6f7a3a;
+    --accent-deep: #4a521f;
+    --accent-soft: #e8eadc;
+    --accent-fg: #fafbf3;
+  }
+  .palette-senf {
+    --accent: #c89432;
+    --accent-deep: #8a611a;
+    --accent-soft: #f4ebd2;
+    --accent-fg: #fffaf0;
+  }
+
+  .dark-mode {
+    --bg: #1a1411;
+    --surface: #241c17;
+    --fg: #f5ece2;
+    --fg-soft: #d6c8b8;
+    --muted: #a39283;
+    --line: rgba(245, 236, 226, 0.10);
+    --line-soft: rgba(245, 236, 226, 0.06);
+  }
+
+  /* Scrollbar hide for filter chip row */
+  ::-webkit-scrollbar { display: none; }
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<!-- React + Babel -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- Starter components -->
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+
+<!-- App scripts -->
+<script type="text/babel" src="recipe-data.jsx"></script>
+<script type="text/babel" src="screens.jsx"></script>
+
+<script type="text/babel">
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#6f7a3a",
+  "dark": false,
+  "showFrames": true,
+  "detailRecipe": "zucchini"
+}/*EDITMODE-END*/;
+
+// Map an accent hex to its palette class (controls --accent-soft / --accent-deep)
+const PALETTE_CLASS = {
+  '#c8623f': '',                // terracotta (default)
+  '#6f7a3a': 'palette-olive',
+  '#c89432': 'palette-senf',
+};
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [detailId, setDetailId] = React.useState(t.detailRecipe);
+
+  React.useEffect(() => { setDetailId(t.detailRecipe); }, [t.detailRecipe]);
+
+  const paletteClass = PALETTE_CLASS[t.accent] || '';
+
+  return (
+    <div className={`${paletteClass} ${t.dark ? 'dark-mode' : ''}`}
+         style={{ minHeight: '100vh' }}>
+      <DesignCanvas>
+        <DCSection
+          id="screens"
+          title="Rezeptsammlung"
+          subtitle="Mobile-first · zwei Kern-Screens · iPhone 15 Pro · 402×874"
+        >
+          <DCArtboard id="home" label="01 · Übersicht (Startseite)" width={402} height={874}>
+            <ScreenHost showFrame={t.showFrames} dark={t.dark}>
+              <HomeScreen accent={t.palette} onOpen={setDetailId} />
+            </ScreenHost>
+          </DCArtboard>
+
+          <DCArtboard id="cook" label="02 · Kochansicht (Detail)" width={402} height={874}>
+            <ScreenHost showFrame={t.showFrames} dark={t.dark}>
+              <CookScreen recipeId={detailId} onBack={() => {}} />
+            </ScreenHost>
+          </DCArtboard>
+        </DCSection>
+
+        <DCPostIt top={40} left={40} width={240}>
+          <b>Designsystem</b><br />
+          Newsreader (Display) · Manrope (UI) · JetBrains Mono (Meta).
+          Warmer Crème-Hintergrund, Terrakotta-Akzent. Fotos sind Platzhalter
+          mit ID-Caption — bereit für echte Food-Fotografie.
+        </DCPostIt>
+      </DesignCanvas>
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Akzentfarbe" />
+        <TweakColor
+          label="Palette"
+          value={t.accent}
+          options={['#c8623f', '#6f7a3a', '#c89432']}
+          onChange={v => setTweak('accent', v)}
+        />
+        <TweakSection label="Anzeige" />
+        <TweakToggle label="Dark Mode" value={t.dark}
+          onChange={v => setTweak('dark', v)} />
+        <TweakToggle label="iPhone-Rahmen" value={t.showFrames}
+          onChange={v => setTweak('showFrames', v)} />
+        <TweakSection label="Detail-Screen" />
+        <TweakSelect
+          label="Rezept"
+          value={t.detailRecipe}
+          options={RECIPES.map(r => ({ value: r.id, label: r.title }))}
+          onChange={v => setTweak('detailRecipe', v)}
+        />
+      </TweaksPanel>
+    </div>
+  );
+}
+
+// Wraps a screen in an iPhone frame OR a plain rounded card (frame off).
+function ScreenHost({ children, showFrame, dark }) {
+  if (showFrame) {
+    return (
+      <div style={{
+        width: '100%', height: '100%',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        background: 'transparent',
+      }}>
+        <IOSDevice width={402} height={874} dark={dark}>
+          {children}
+        </IOSDevice>
+      </div>
+    );
+  }
+  return (
+    <div style={{
+      width: '100%', height: '100%',
+      overflow: 'hidden',
+      borderRadius: 12,
+      border: '1px solid rgba(0,0,0,0.08)',
+      background: 'var(--bg)',
+    }}>
+      {children}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+</body>
+</html>

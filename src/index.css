@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design-Token-System (CSS Custom Properties) ─── */
+:root {
+  --bg:           #faf6f0;
+  --surface:      #ffffff;
+  --fg:           #2a1f1a;
+  --fg-soft:      #4a3a30;
+  --muted:        #8a7a6e;
+  --line:         rgba(42, 31, 26, 0.10);
+  --line-soft:    rgba(42, 31, 26, 0.06);
+
+  /* Terrakotta-Akzent (Standard) */
+  --accent:       #c8623f;
+  --accent-deep:  #8a3e25;
+  --accent-soft:  #f4e3d9;
+  --accent-fg:    #fffaf6;
+}
+
+/* Olivgrün-Akzent */
+:root[data-accent="olive"] {
+  --accent:       #6f7a3a;
+  --accent-deep:  #4a521f;
+  --accent-soft:  #e8eadc;
+  --accent-fg:    #fafbf3;
+}
+
+/* Senfgelb-Akzent */
+:root[data-accent="mustard"] {
+  --accent:       #c89432;
+  --accent-deep:  #8a611a;
+  --accent-soft:  #f4ebd2;
+  --accent-fg:    #fffaf0;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:         #1a1411;
+    --surface:    #241c17;
+    --fg:         #f5ece2;
+    --fg-soft:    #d6c8b8;
+    --muted:      #a39283;
+    --line:       rgba(245, 236, 226, 0.10);
+    --line-soft:  rgba(245, 236, 226, 0.06);
+  }
+}
+
+/* ─── Globale Basis-Styles ─── */
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chip-Scroll-Zeile: Scrollbar ausblenden */
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  /* screen-height: dvh mit vh-Fallback für ältere Browser */
+  .screen-height {
+    height: 100vh;
+    height: 100dvh;
+  }
+}

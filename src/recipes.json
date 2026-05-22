@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "title": "Zucchinipuffer",
+    "description": "Einfache, schnelle Gemüsepuffer mit geriebenem Käse – außen kross, innen saftig. Geheimzutat: Käse im Teig.",
+    "source_url": "public/images/zucchinipuffer.png",
+    "image_url": "/images/zucchinipuffer.png",
+    "cook_time_minutes": 30,
+    "servings": 4,
+    "labels": ["Abendessen", "Snack", "vegetarisch", "schnell (<30 Min)"],
+    "ingredients": [
+      { "amount": 1000, "unit": "g", "name": "Zucchini" },
+      { "amount": 1, "unit": "Stück", "name": "Zwiebel" },
+      { "amount": 1, "unit": "Stück", "name": "Knoblauchzehe" },
+      { "amount": 150, "unit": "g", "name": "Mehl" },
+      { "amount": 2, "unit": "EL", "name": "Semmelbrösel" },
+      { "amount": 3, "unit": "Stück", "name": "Eier" },
+      { "amount": 100, "unit": "g", "name": "geriebener Käse" },
+      { "amount": 1, "unit": "TL", "name": "Salz" },
+      { "amount": 0, "unit": null, "name": "Pfeffer" },
+      { "amount": 0, "unit": null, "name": "Öl zum Anbraten" }
+    ],
+    "steps": [
+      "Zucchini grob reiben, in ein sauberes Geschirrtuch geben und die Flüssigkeit gut ausdrücken. Zwiebel und Knoblauch klein hacken.",
+      "Alle Zutaten (Zucchini, Zwiebel, Knoblauch, Mehl, Semmelbrösel, Eier, Käse, Salz, Pfeffer) miteinander vermengen.",
+      "Öl in der Pfanne erhitzen und den Teig mit einem Esslöffel portionsweise in die Pfanne geben. Bei mittlerer Hitze von jeder Seite ca. 5 Minuten goldbraun anbraten."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Krautnudeln",
+    "description": "Deftige, preiswerte Nudelpfanne mit Weißkohl und Speck – ein Wohlfühlklassiker wie von Oma, in 30 Minuten fertig.",
+    "source_url": "https://www.gaumenfreundin.de/krautnudeln-rezept/",
+    "image_url": "/images/krautnudeln.png",
+    "cook_time_minutes": 30,
+    "servings": 4,
+    "labels": ["Abendessen", "Mittagessen", "warm", "schnell (<30 Min)"],
+    "ingredients": [
+      { "amount": 700, "unit": "g", "name": "Weißkohl" },
+      { "amount": 1, "unit": "Stück", "name": "Zwiebel" },
+      { "amount": 2, "unit": "EL", "name": "Sonnenblumenöl" },
+      { "amount": 150, "unit": "g", "name": "Speckwürfel" },
+      { "amount": 300, "unit": "g", "name": "Bandnudeln" },
+      { "amount": 0, "unit": null, "name": "Salz und Pfeffer" },
+      { "amount": 0, "unit": null, "name": "Kümmel" },
+      { "amount": 0, "unit": null, "name": "Paprikapulver edelsüß" },
+      { "amount": 0, "unit": null, "name": "Schnittlauch und Petersilie (zum Servieren)" }
+    ],
+    "steps": [
+      "Die äußeren Blätter vom Weißkohl entfernen und den Kohl in Streifen schneiden. Zwiebel klein würfeln.",
+      "Öl in einer Pfanne erhitzen, Zwiebeln und Speck anbraten. Dann den Weißkohl zugeben und bei mittlerer Hitze 20 Minuten mit geschlossenem Deckel schmoren. Ab und zu umrühren. Mit Salz, Pfeffer, Kümmel und Paprikapulver würzen.",
+      "Währenddessen Bandnudeln in gesalzenem Wasser kochen, abgießen und unter den Weißkohl heben.",
+      "Mit Schnittlauch und Petersilie servieren."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Kaspressknödel",
+    "description": "Traditionelle Tiroler Knödel mit würzigem Bergkäse, außen knusprig und innen weich. Perfekt mit Salat oder als Suppeneinlage.",
+    "source_url": "https://www.gaumenfreundin.de/wp-content/uploads/2023/01/Kaspressknoedel-von-Gaumenfreundin.jpg",
+    "image_url": "/images/kaspressknodel.png",
+    "cook_time_minutes": 30,
+    "servings": 4,
+    "labels": ["Abendessen", "Mittagessen", "warm", "vegetarisch"],
+    "ingredients": [
+      { "amount": 250, "unit": "g", "name": "Weißbrot oder Brötchen (vom Vortag)" },
+      { "amount": 250, "unit": "ml", "name": "Milch (3,5% Fett)" },
+      { "amount": 1, "unit": "Stück", "name": "Zwiebel" },
+      { "amount": 0.5, "unit": "Bund", "name": "glatte Petersilie" },
+      { "amount": 175, "unit": "g", "name": "Bergkäse (kräftig)" },
+      { "amount": 0, "unit": null, "name": "Butter zum Anbraten" },
+      { "amount": 3, "unit": "Stück", "name": "Eier (Größe M)" },
+      { "amount": 0, "unit": null, "name": "Salz und Pfeffer" },
+      { "amount": 2, "unit": "Prisen", "name": "Muskatnuss" }
+    ],
+    "steps": [
+      "Brot in kleine Würfel schneiden und in eine Schüssel geben. Mit warmer Milch übergießen.",
+      "Zwiebel und Petersilie klein hacken. Käse in kleine Würfel schneiden.",
+      "1 EL Butter in einer Pfanne erhitzen und die Zwiebeln anschwitzen. Dann die Petersilie unterheben.",
+      "Zwiebeln, Petersilie, Eier, Käse, Salz, Pfeffer und Muskat zum Brot geben und alles vermengen. Falls die Masse zu feucht ist, 1–2 EL Semmelbrösel unterheben. 10 Minuten ruhen lassen, dann mit angefeuchteten Händen 12 flache Knödel formen.",
+      "Reichlich Butter in einer Pfanne erhitzen und die Knödel bei mittlerer Hitze von beiden Seiten goldbraun und knusprig anbraten."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Gemüsegratin",
+    "description": "Herziger Schweizer Klassiker: Erbsen, Blumenkohl, Karotten und Kartoffeln in einem rahmigen Ei-Käse-Guss mit Oregano.",
+    "source_url": "https://recipeimages.migros.ch/crop/v-w-1200-h-630-a-center_center/2819384a3575550e46f5f77234aa4f9d09fc0e4f/gemuesegratin-0-16-9.jpg",
+    "image_url": "/images/gemuesegratin.png",
+    "cook_time_minutes": 50,
+    "servings": 4,
+    "labels": ["Abendessen", "Mittagessen", "warm", "vegetarisch", "Schweizer Küche"],
+    "ingredients": [
+      { "amount": 200, "unit": "g", "name": "Blumenkohl" },
+      { "amount": 200, "unit": "g", "name": "Karotten" },
+      { "amount": 600, "unit": "g", "name": "festkochende Kartoffeln" },
+      { "amount": 1, "unit": "l", "name": "Gemüsebouillon" },
+      { "amount": 200, "unit": "g", "name": "tiefgekühlte Erbsen (aufgetaut)" },
+      { "amount": 2.5, "unit": "dl", "name": "Halbrahm" },
+      { "amount": 1, "unit": "Stück", "name": "Ei" },
+      { "amount": 50, "unit": "g", "name": "geriebener Gruyère" },
+      { "amount": 0, "unit": null, "name": "Salz und Pfeffer" },
+      { "amount": 1, "unit": "TL", "name": "getrockneter Oregano" }
+    ],
+    "steps": [
+      "Blumenkohl in Röschen teilen. Karotten in ca. 3 cm lange Stäbchen, Kartoffeln in ca. 1 cm große Würfel schneiden. Backofen auf 200 °C Unter-/Oberhitze vorheizen.",
+      "Bouillon aufkochen. Gemüse und Kartoffeln in der Bouillon 8–10 Minuten blanchieren. Mit einer Lochkelle herausheben und mit den Erbsen in eine große Gratinform (ca. 28×20 cm) geben.",
+      "1 dl der Gemüsebouillon, Rahm, Ei und Käse verquirlen. Mit Salz, Pfeffer und Oregano würzen. Guss über das Gemüse gießen. Im Ofen ca. 20 Minuten backen."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Nudeln mit Porree und Walnusspesto",
+    "description": "Schnelle, vegetarische Pasta mit zartem Porree und einem nussigen Walnuss-Parmesan-Pesto. In 20 Minuten fertig.",
+    "source_url": "https://www.lidl-kochen.de/rezeptwelt/nudeln-mit-porree-und-walnusspesto-144483",
+    "image_url": "/images/nudeln_walnusspesto.png",
+    "cook_time_minutes": 20,
+    "servings": 4,
+    "labels": ["Abendessen", "Mittagessen", "warm", "vegetarisch", "schnell (<30 Min)"],
+    "ingredients": [
+      { "amount": 320, "unit": "g", "name": "Spaghetti" },
+      { "amount": 2, "unit": "Stück", "name": "Porree (Lauch)" },
+      { "amount": 60, "unit": "g", "name": "Walnüsse" },
+      { "amount": 40, "unit": "g", "name": "Parmesan (gerieben)" },
+      { "amount": 3, "unit": "EL", "name": "Olivenöl" },
+      { "amount": 0, "unit": null, "name": "Salz und Pfeffer" }
+    ],
+    "steps": [
+      "In einem Topf ca. 5 l Salzwasser aufkochen. Porree waschen, Wurzelende entfernen, längs halbieren, quer vierteln und in feine Streifen schneiden. In einem Sieb waschen und abtropfen lassen.",
+      "Spaghetti im kochenden Salzwasser ca. 10 Minuten bissfest garen. Porree nach ca. 5 Minuten zur Pasta in den Topf geben und mitgaren.",
+      "Walnüsse sehr fein hacken oder mörsern und mit Parmesan und Olivenöl vermengen. Etwas Kochwasser abschöpfen und ebenfalls unter das Walnusspesto mischen. Mit Salz und Pfeffer abschmecken.",
+      "Eine Tasse Kochwasser abschöpfen, Spaghetti mit Porree abgießen. Zurück in den Topf geben, mit dem Walnusspesto vermengen. Falls nötig 1–2 EL Kochwasser zum Auflockern unterheben. Auf Tellern servieren."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Lachs im Ofen mit Zitrone und Erbsen",
+    "description": "Zarter Ofenlachs auf Quinoa mit geschmortem Fenchel, Erbsen und frischem Dill – leicht, gesund und in 20 Minuten fertig.",
+    "source_url": "https://www.lidl-kochen.de/rezeptwelt/lachs-im-ofen-mit-zitrone-und-erbsen-309949",
+    "image_url": "/images/lachs-im-ofen-mit-zitrone-und-erbsen-309949.png",
+    "cook_time_minutes": 20,
+    "servings": 4,
+    "labels": ["Abendessen", "Mittagessen", "warm", "schnell (<30 Min)"],
+    "ingredients": [
+      { "amount": 4, "unit": "Stück", "name": "Lachsfilets" },
+      { "amount": 200, "unit": "g", "name": "Quinoa" },
+      { "amount": 200, "unit": "g", "name": "tiefgekühlte Erbsen" },
+      { "amount": 1, "unit": "Stück", "name": "Fenchelknolle" },
+      { "amount": 1, "unit": "Stück", "name": "Zitrone" },
+      { "amount": 0.5, "unit": "Bund", "name": "Dill" },
+      { "amount": 3, "unit": "EL", "name": "Butter" },
+      { "amount": 0, "unit": null, "name": "Salz, Pfeffer, Zucker" }
+    ],
+    "steps": [
+      "Ofen auf 180 °C Umluft vorheizen. Lachsfilets waschen, trocken tupfen und beiseitestellen. Erbsen in einem Sieb unter warmem Wasser abspülen und abtropfen lassen.",
+      "Quinoa mit ca. 300 ml Salzwasser zugedeckt aufkochen und auf niedriger Stufe ca. 15 Minuten köcheln lassen. Vom Herd nehmen, 1 EL Butter unterheben und ca. 8–10 Minuten zugedeckt quellen lassen.",
+      "Fenchel waschen, Strunk und Stiele entfernen, Fenchelgrün aufbewahren. Knolle halbieren und in sehr dünne Scheiben schneiden. Zitronensaft auspressen. Dill grob hacken.",
+      "Lachsfilets rundherum salzen und auf einem Backblech mit Backpapier im Ofen ca. 10 Minuten garen.",
+      "In einer Pfanne Zitronensaft, etwas Salz und 2 EL Butter erhitzen. Fenchel darin zugedeckt ca. 3–5 Minuten garen. Erbsen zugeben, mit Salz und Zucker würzen. Dill untermischen.",
+      "Lachs grob in Stücke zupfen. Quinoa mit Salz und Pfeffer abschmecken. Quinoa, Fenchel-Erbsen-Gemüse und Lachs auf Tellern anrichten. Mit Fenchelgrün und Zitronenbutter beträufeln."
+    ]
+  }
+]
